@@ -1,11 +1,115 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hola Mundo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: #080b18;
+            color: white;
+            overflow: hidden;
+        }
+
+        .fondo {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #693cff;
+            filter: blur(150px);
+            opacity: 0.5;
+            border-radius: 50%;
+        }
+
+        .contenedor {
+            position: relative;
+            text-align: center;
+            padding: 65px;
+            border: 1px solid #ffffff25;
+            border-radius: 25px;
+            background: #ffffff0c;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 60px #693cff20;
+            animation: aparecer 1.2s ease;
+        }
+
+        h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #a78bfa, #38bdf8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        p {
+            color: #b8bfd5;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #7545ff, #2589ff);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px #7545ff;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    Hola Mundo, me llamo Santiago
+
+    <div class="fondo"></div>
+
+    <div class="contenedor">
+        <h1>¡Hola Mundo!</h1>
+
+        <p>Mi primera página web está tomando vida.</p>
+
+        <button onclick="saludar()">
+            Haz clic aquí ✨
+        </button>
+    </div>
+
+    <script>
+        function saludar() {
+            alert("¡Hola! Bienvenido a mi primera página web 🚀");
+        }
+    </script>
+
 </body>
 </html>
